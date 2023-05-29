@@ -16,7 +16,7 @@ const Offer = ({data}) => {
     const itemId = data[1]?.id;
 
     const startTimer = () => {
-        const countDownDate = new Date("June 1,2023").getTime();
+        const countDownDate = new Date("June 30,2023").getTime();
         interval = setInterval(() => {
             const now = new Date().getTime();
             const distance = countDownDate - now;

@@ -14,7 +14,7 @@ const Showproducts = ({data,setFilter,filter}) => {
     }
   return (
     <>
-    <div className='Items'>
+    <div className='Items' id='items'>
       <button className={active === "all" && "active"} onClick={()=>{setFilter(data),setActive("all")}}>All</button>
       <button className={active === "men's clothing" && "active"} onClick={() =>{handleProduct("men's clothing"),setActive("men's clothing")}}>Men's clothing</button>
       <button className={active === "women's clothing" && "active"} onClick={() =>{handleProduct("women's clothing"),setActive("women's clothing")}}>Women's clothing</button>
@@ -22,7 +22,7 @@ const Showproducts = ({data,setFilter,filter}) => {
       <button className={active === "electronics" && "active"} onClick={()=>{handleProduct("electronics"),setActive("electronics")}}>Electronics</button>
     </div>
     
-    <div className="cart">
+    <div className="cart" >
     {
         filter.map((Products) => {
             return(

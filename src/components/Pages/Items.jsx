@@ -5,9 +5,16 @@ import { AppContext } from '../Context/AppContext'
 const Items = ({items}) => {
   console.log("items",items);
 
-  const {dispatch} = useContext(AppContext)
+  const {state,dispatch} = useContext(AppContext)
+
+  let cartAdded = state.cartItems.some(item => item.id === items.id) 
 
     const handleCart = () => {
+      cartAdded ?  dispatch({
+        type:"EXISTING",
+        payload:items,
+      })
+      :
         dispatch({
           type:"ADD_TO_CART",
           payload:items,
