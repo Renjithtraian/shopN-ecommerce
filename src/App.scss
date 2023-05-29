@@ -434,7 +434,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 3rem;
+            gap: 1rem;
             flex-wrap: wrap;
             &-icons{
                 display: flex;
@@ -492,7 +492,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1rem;
             // row-gap: .5rem;
                 .items-box{
                     // height:15%;
@@ -558,7 +558,7 @@
         }
         
     }
-    @media (max-width : 550px){
+    @media (max-width : 400px){
         .products{
             .head{
                 color: var(--secondary-color);
@@ -570,7 +570,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 5rem;
+                gap: 3rem;
                 flex-wrap: wrap;
                 &-icons{
                     display: flex;
@@ -598,7 +598,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 2rem;
+                gap: 1rem;
                 button{
                     cursor: pointer;
                     color: var(--secondary-color);
