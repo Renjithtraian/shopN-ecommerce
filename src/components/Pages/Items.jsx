@@ -24,7 +24,7 @@ const Items = ({items}) => {
   return (
     
     <div className="details-container">
-    <img src={items.image} alt={items.title} style={{maxHeight:"400px",maxWidth:"490px"}}/>
+    <img src={items.image} alt={items.title}/>
             <div className="details-container-text">
                 <h1>{items.category}</h1>
                 <h3>{items.title}</h3>
