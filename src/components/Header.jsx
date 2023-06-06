@@ -6,17 +6,6 @@ import  shopCart from "../assets/shopping-cart.png";
 import { useContext } from 'react';
 import { AppContext } from './Context/AppContext';
 
-const Menus = () => {
-  return(
-  <>
-  <p><Link to="/">Home</Link></p>
-  <p><Link to="/products">Products</Link></p>
-  <p><Link to="/contact">Contact</Link></p>
-  <p><Link to="/about">About</Link></p>
-  <p><Link to="/cart">Cart</Link></p>
-  </>
-  )
-}
 
 const Header = () => {
 
@@ -66,7 +55,18 @@ const Header = () => {
           toggleMenu && (
             <div className="header-menu-container scale-up-center">
               <div className="header-menu-container-links">
-                <Menus/>
+                <p><Link to="/">Home</Link></p>
+                <p><Link to="/products">Products</Link></p>
+                <p><Link to="/contact">Contact</Link></p>
+                <p><Link to="/about">About</Link></p>
+                <p><Link to="/cart">
+                  <div className="Favcount">
+                    Cart
+                        <img src={shopCart}/>
+                        <span className='count'>{state.cartItems.length}</span>
+                  </div>
+    
+                  </Link></p>                
                 <div className="header-menu-container-login">
                   <button type='button'>Login</button>
                 </div>

@@ -183,6 +183,24 @@
                 p{
                     margin: .7rem 0;
                     a{
+                        .Favcount{
+                            position: relative;
+                            height: 100%;
+                        img{
+                            position: relative;
+                            width: 25px;
+                        }
+                        .count{
+                            position: absolute;
+                            right: -11px;
+                            top: -2px;
+                            background-color: var(--primary-color);
+                            color: #ffff;
+                            font-size: 12px;
+                            padding: 2px 5px; 
+                            border-radius: 50%;                  
+                        }
+                        }
                         color: #ffff;
                         font-size: 1.3rem;
                         letter-spacing: var(--letter-spacing);
@@ -443,6 +461,7 @@
                 border-radius: 10px;
                 background-color: var(--secondary-color);
                 padding: 1rem 2rem;
+                width: 16rem;
                 gap: .3rem;
                 img{
                     width: 25px;
@@ -578,7 +597,8 @@
                     align-items: center;
                     border-radius: 10px;
                     background-color: var(--secondary-color);
-                    padding: 1rem 2rem;
+                    padding: 1rem 1rem;
+                    width: 14rem;
                     gap: .3rem;
                     img{
                         width: 25px;
