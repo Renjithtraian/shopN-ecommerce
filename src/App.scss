@@ -334,7 +334,8 @@
             color: var(--secondary-color);
             text-transform: uppercase;
             margin-bottom: 12px;
-            font-size: 3.5rem;
+            line-height: 5rem;
+            font-size: 4.5rem;
             font-weight: 800;
             text-shadow: 3px 3px 8px var(--primary-color);
         }
@@ -376,6 +377,7 @@
                 letter-spacing: var(--letter-spacing);
             }
             h2{
+                line-height: 2rem;
                 color: var(--secondary-color);
                 text-transform: uppercase;
                 margin-bottom: 8px;
@@ -422,6 +424,7 @@
                     letter-spacing: var(--letter-spacing);
                 }
                 h2{
+                    line-height: 1.5rem;
                     color: var(--secondary-color);
                     text-transform: uppercase;
                     margin-bottom: 12px;
