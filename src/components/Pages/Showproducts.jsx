@@ -7,8 +7,8 @@ const Showproducts = ({data,setFilter,filter}) => {
     const [active,setActive] = useState("all")
 
     const handleProduct = (cat) => {
-        const updateList = data.filter((x) => {
-            return x.category === cat
+        const updateList = data.filter((items) => {
+            return items.category === cat
         })
         setFilter(updateList);
     }
@@ -39,9 +39,7 @@ const Showproducts = ({data,setFilter,filter}) => {
             )
         })
       }
-      </div>
-      {/* <Offer filter={filter}/> */}
-  
+      </div>  
   </>
   )
 }

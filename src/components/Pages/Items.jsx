@@ -30,8 +30,8 @@ const Items = ({items}) => {
                 <h3>{items.title}</h3>
                 <p>{items.description}</p>
                 <h4>${items.price}</h4>
-                    <button onClick={handleCart}>Add to Cart</button>
-                    <button>Buy now</button>
+                <button onClick={handleCart}>Add to Cart</button>
+                <button>Buy now</button>
             </div>
             
 </div>

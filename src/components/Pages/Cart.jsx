@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { AppContext } from '../Context/AppContext'
+import { useFetcher } from 'react-router-dom'
 
 const Cart = () => {
+
   const {state,dispatch} = useContext(AppContext)
   console.log("state",state);
 
@@ -12,6 +14,21 @@ const Cart = () => {
       payload:itemId,
     })
   }
+
+  const handleQuantity = (e,id) => {
+    const updateCartItems = state.cartItems.map((item) => {
+      if(item.id === id){
+        return {...item,quantity:parseInt(e.target.value)}
+      }
+      return item
+    })
+    dispatch({
+      type:"UPDATE_QTY",
+      payload:updateCartItems,
+    })
+  }
+
+  
 
   return (
 
@@ -25,6 +42,7 @@ const Cart = () => {
         </tr>
         {
           state.cartItems.map((Items) => {
+            console.log("items",Items);
             return(
               <tr>
                 <td>
@@ -39,8 +57,8 @@ const Cart = () => {
                   </div>
                   </div>
                 </td>
-                <td><input type='number' value="1"/></td>
-                <td>$999</td>
+                <td><input min="1" type='number' value={Items.quantity} onChange={(e) => handleQuantity(e,Items.id)}/></td>
+                <td>${Items.price * Items.quantity}</td>
               </tr>
             )
           })
